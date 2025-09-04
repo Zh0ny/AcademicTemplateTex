@@ -1,196 +1,131 @@
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%% Customizações do abnTeX2 (http://abnTeX2.googlecode.com)           %%
-%% para a Universidade Estadual do Ceara - UECE                       %%
-%%                                                                    %%
-%% This work may be distributed and/or modified under the             %% 
-%% conditions of the LaTeX Project Public License, either version 1.3 %%
-%% of this license or (at your option) any later version.             %%
-%% The latest version of this license is in                           %%
-%%   http://www.latex-project.org/lppl.txt                            %%
-%% and version 1.3 or later is part of all distributions of LaTeX     %%
-%% version 2005/12/01 or later.                                       %%
-%%                                                                    %%
-%% This work has the LPPL maintenance status `maintained'.            %%
-%%                                                                    %%
-%% The Current Maintainer of this work is Thiago Nascimento           %%
-%%                                                                    %%
-%% Project available on: https://github.com/thiagodnf/uecetex2        %%
-%%                                                                    %%
-%% Further information about abnTeX2                                  %%
-%% are available on http://abntex2.googlecode.com/                    %%
-%%                                                                    %%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\input{lib/preambulo}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%               IMTeX2               %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%          Configuracoes do ueceTeX2              %%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[        
+    a4paper,          % Tamanho da folha A4
+    12pt,             % Tamanho da fonte 12pt
+    chapter=TITLE,    % Todos os capitulos devem ter caixa alta
+    oneside,          % Usada para impressao em apenas uma face do papel
+    english,          % Hifenizacoes em ingles
+    spanish,          % Hifenizacoes em espanhol
+    brazil,            % Ultimo idioma eh o idioma padrao do documento
+    hyphens        % Forçar a quebra de URLs que excedem a margem
+]{abntex2}
+%\usepackage[showframe]{geometry}
+\usepackage{lib/imtex2} % Pacote com as definicoes do IMTeX2
+\ies{Universidade Federal de Alagoas}
+\graduacaoem{Matemática}
+\habilitacao{Licenciatura}
+\autor{Autor Menin@ Matemáti@}
+\titulo{Exemplo título:}
+\subtitulo{Exemplo subtítulo}
+\local{Maceió - AL}
+\data{\the\year}
+% Defina a data de aprovação (DD, MM, AAAA)
+\dataaprovacao{01}{01}{2000}
+\trabalhoacademico{tccgraduacao}
+\qualificacao{nao}
+\removerbordasdohyperlink{sim}
 
-% Opcoes disponiveis
-
-%\trabalhoacademico{tccgraduacao}
-%\trabalhoacademico{tccespecializacao}
-\trabalhoacademico{dissertacao}
-%\trabalhoacademico{tese}
-
-% Define se o trabalho eh uma qualificacao
-% Coloque 'nao' para versao final do trabalho
-
-\ehqualificacao{nao}
-
-% Remove as bordas vermelhas e verdes do PDF gerado
-% Coloque 'sim' pare remover
-
-\removerbordasdohyperlink{sim} 
-
-% Adiciona a cor Azul a todos os hyperlinks
-
-\cordohyperlink{nao}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%          Informação sobre a IES                 %%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\ies{Universidade Estadual do Ceará}
-\iessigla{UECE}
-\centro{Centro de Ciências e Tecnologia}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%        Informação para TCC de Graduacao         %%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\graduacaoem{Ciência da Computação}
-\habilitacao{bacharel} % Pode colocar tambem 'licenciada'
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%     Informação para TCC de Especializacao       %%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\especializacaoem{Alfabetização de Crianças}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%         Informação para Dissertacao             %%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\programamestrado{Programa de Pós-Graduação em Ciência da Computação}
-\nomedomestrado{Mestrado Acadêmico em Ciência da Computação}
-\mestreem{Ciência da Computação}
-\areadeconcentracaomestrado{Ciência da Computação}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%               Informação para Tese              %%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\programadoutorado{Programa de Pós-Graduação em Saúde Coletiva}
-\nomedodoutorado{Doutorado em Saúde Coletiva}
-\doutorem{Saúde Coletiva}
-\areadeconcentracaodoutorado{Saúde Coletiva}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%  Informação relacionadas ao trabalho     %%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\autor{Nome Sobrenome}
-\titulo{Título do Trabalho}
-\data{2017}
-\local{Fortaleza -- Ceará}
-
-% Exemplo: \dataaprovacao{01 de Janeiro de 2012}
-\dataaprovacao{}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%     Informação sobre o Orientador       %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\orientador{Nome do seu Orientador}
-\orientadories{Universidade Estadual do Ceará – UECE}
-\orientadorcentro{Centro de Ciências e Tecnologia - CCT}
-\orientadorfeminino{nao} % Coloque 'sim' se for do sexo feminino
+\orientador{Ótimo Orientado}
+\orientadories{Universidade Federal de Alagoas – UFAL}
+\orientadorcentro{Instituto de Matemática - IM}
+\orientadorfeminino{nao}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%      Informação sobre o Co-orientador   %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-% Deixe o nome do coorientador em branco para remover do documento
-
-\coorientador{}
+\coorientador{}%Caso não tenha coorientador coloque em branco
 \coorientadories{Universidade Co-orientador - SIGLA}
 \coorientadorcentro{Centro do Co-orientador - SIGLA}
-\coorientadorfeminino{nao} % Coloque 'sim' se for do sexo feminino
+\coorientadorfeminino{nao}
+
+%Caso exista coorientador as numerações abaixo a respeito dos membros da banca devem ser desconsideradas.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%      Informação sobre a banca           %%
+%%  Informação sobre o Membro da banca 2   %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-% Atenção! Deixe o nome do membro da banca para remover da folha de aprovacao
-
-% Exemplo de uso:
-% \membrodabancadois{Prof. Dr. Fulano de Tal}
-% \membrodabancadoisies{Universidade Estadual do Ceará - UECE}
 
 \membrodabancadois{Membro da Banca Dois}
-\membrodabancadoiscentro{Faculdade de Filosofia Dom Aureliano Matos – FAFIDAM}
-\membrodabancadoisies{Universidade do Membro da Banca Dois - SIGLA}
+\membrodabancadoiscentro{Universidade Banca Dois - SIGLA}
+\membrodabancadoisies{Centro da Banca Dois - SIGLA}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%  Informação sobre o Membro da banca 3   %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \membrodabancatres{Membro da Banca Três}
-\membrodabancatrescentro{Centro de Ciências e Tecnologia - CCT}
-\membrodabancatresies{Universidade do Membro da Banca Três - SIGLA}
+\membrodabancatrescentro{Universidade Banca Três - SIGLA}
+\membrodabancatresies{Centro da Banca Três - SIGLA}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%  Informação sobre o Membro da banca 4   %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \membrodabancaquatro{Membro da Banca Quatro}
-\membrodabancaquatrocentro{Centro de Ciências e Tecnologia - CCT}
-\membrodabancaquatroies{Universidade do Membro da Banca Quatro - SIGLA}
+\membrodabancaquatrocentro{Universidade Banca Quatro - SIGLA}
+\membrodabancaquatroies{Centro da Banca Quatro - SIGLA}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%  Informação sobre o Membro da banca 5   %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \membrodabancacinco{Membro da Banca Cinco}
-\membrodabancacincocentro{Teste}
-\membrodabancacincoies{Universidade do Membro da Banca Cinco - SIGLA}
-\membrodabancaseis{Membro da Banca Seis}
-\membrodabancaseiscentro{}
-\membrodabancaseisies{Universidade do Membro da Banca Seis - SIGLA}
+\membrodabancacincocentro{Universidade Banca Cinco - SIGLA}
+\membrodabancacincoies{Centro da Banca Cinco - SIGLA}
 
-\begin{document}	
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%  Informação sobre o Membro da banca 6   %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-	% Se o seu trabalho é em ingles, descomente a linha a seguir
-	%\selectlanguage{english}
+\membrodabancaseis{}
+\membrodabancaseiscentro{Universidade Banca Seis - SIGLA}
+\membrodabancaseisies{Centro da Banca Seis - SIGLA}
 
-	% Elementos pré-textuais
-	\imprimircapa
-	\imprimirfolhaderosto{}
-	\imprimirfichacatalografica{elementos-pre-textuais/ficha-catalografica}
-	\imprimirerrata{elementos-pre-textuais/errata}
-	\imprimirfolhadeaprovacao
-	\imprimirdedicatoria{elementos-pre-textuais/dedicatoria}
-	\imprimiragradecimentos{elementos-pre-textuais/agradecimentos}
-	\imprimirepigrafe{elementos-pre-textuais/epigrafe}
-	\imprimirresumo{elementos-pre-textuais/resumo}
-	\imprimirabstract{elementos-pre-textuais/abstract}
-	\imprimirlistadeilustracoes
-	\imprimirlistadetabelas
-	\imprimirlistadequadros
-	\imprimirlistadealgoritmos
-	\imprimirlistadecodigosfonte
-	\imprimirlistadeabreviaturasesiglas	
-	\imprimirlistadesimbolos{elementos-pre-textuais/lista-de-simbolos}   
-	\imprimirsumario
-	
-	%Elementos textuais
-	\textual
-	\input{elementos-textuais/introducao}
-	\input{elementos-textuais/fundamentacao-teorica}
-	\input{elementos-textuais/trabalhos-relacionados}
-	\input{elementos-textuais/metodologia}
-	\input{elementos-textuais/resultados}
-	\input{elementos-textuais/conclusao}
-	
-	%Elementos pós-textuais	
-	\bibliography{elementos-pos-textuais/referencias}
-	\imprimirglossario	
-	\imprimirapendices
-		% Adicione aqui os apendices do seu trabalho
-		\input{elementos-pos-textuais/apendices/historico-de-mudancas}
-		\input{elementos-pos-textuais/apendices/lorem-ipsum}
-		\input{elementos-pos-textuais/apendices/termo-de-fiel-depositario}	
-	\imprimiranexos
-		% Adicione aqui os anexos do seu trabalho
-		\input{elementos-pos-textuais/anexos/exemplo-de-anexo}		
-		\input{elementos-pos-textuais/anexos/dinamica-das-classes-sociais}
-	\imprimirindice
+\input{elementos_pre_textuais/opcional/lista_de_abreviaturas_e_siglas}
+\glsaddall[types=acronym]
+\begin{document}
+    \imprimircapa
+    \imprimirfolhaderosto{}
+    \imprimirerrata{elementos_pre_textuais/opcional/errata}
+    \imprimirfolhadeaprovacao
+    \imprimirdedicatoria{elementos_pre_textuais/opcional/dedicatoria}
+    \imprimiragradecimentos{elementos_pre_textuais/opcional/agradecimentos}
+    \imprimirepigrafe{elementos_pre_textuais/opcional/epigrafe}
+    \imprimirresumo{elementos_pre_textuais/resumo_na_lingua_vernacula}
+    \imprimirabstract{elementos_pre_textuais/resumo_em_lingua_estrangeira}
+    \imprimirlistadeilustracoes
+    \imprimirlistadetabelas
+    \imprimirlistadeabreviaturasesiglas
+    \imprimirlistadesimbolos
+    \imprimirsumario
+    %
+    \textual
+    \input{elementos_textuais/introducao}
+    \input{elementos_textuais/fundamentacao_teorica}
+    \input{elementos_textuais/trabalhos_relacionados}
+    \input{elementos_textuais/metodologia}
+    \input{elementos_textuais/desenvolvimento.tex}
+    \input{elementos_textuais/resultados}
+    \input{elementos_textuais/conclusao}
 
+    %Elementos pós-textuais	
+    \bibliography{elementos_pos_textuais/referencias}
+    \input{elementos_pos_textuais/opcional/glossario}
+    \imprimirglossario
+    \imprimirapendices
+    % Adicione aqui os apendices do seu trabalho
+    \input{elementos_pos_textuais/opcional/apendice}
+    \imprimiranexos
+    % Adicione aqui os anexos do seu trabalho
+    \input{elementos_pos_textuais/opcional/anexo}
+    \imprimirindice
 \end{document}
