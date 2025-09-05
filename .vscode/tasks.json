@@ -1,0 +1,34 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "svg_figure_manipulation",
+            "type": "process",
+            "command": "python",
+            "args": [
+                "${workspaceFolder}/lib/svg_figure_creation.py",
+                "${command:extension.commandvariable.selectedText}"
+            ],
+            "problemMatcher": [
+                {
+                    "owner": "python",
+                    "fileLocation": [
+                        "relative",
+                        "${workspaceFolder}"
+                    ],
+                    "pattern": {
+                        "regexp": "^(.*):(\\d+):(\\d+): (.*)$",
+                        "file": 1,
+                        "line": 2,
+                        "column": 3,
+                        "message": 4
+                    }
+                }
+            ],
+            "presentation": {
+                "reveal": "never",
+                "panel": "shared"
+            }
+        }
+    ]
+}

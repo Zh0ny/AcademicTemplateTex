@@ -55,12 +55,6 @@ indent.log
 *.sym
 
 
-# --- Pastas de Editores e IDEs ---
-.vscode/
-.idea/
-.ionide/
-
-
 # --- Arquivos específicos de Sistemas Operacionais ---
 .DS_Store
 Thumbs.db
